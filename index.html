@@ -4,52 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cripto Blindada: A Autocustódia Perfeita</title>
-    <meta name="description" content="Guia definitivo para proteger seu Bitcoin de golpes e hacks com o Método da Autocustódia Perfeita.">
+    <meta name="description" content="O guia definitivo de Autocustódia Perfeita para blindar seu Bitcoin contra hacks, golpes e falências de exchanges. Chega de medo!">
     <style>
-        /* RESET BÁSICO */
+        /* RESET BÁSICO E CORES */
         body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0d1117; color: #f0f6fc; line-height: 1.6; }
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .container { max-width: 850px; margin: 0 auto; padding: 20px; }
+        .section { padding: 40px 0; border-bottom: 1px solid #161b22; }
 
-        /* HEADERS E TEXTO */
-        h1 { color: #f7931a; font-size: 2.5em; text-align: center; margin-bottom: 10px; }
-        h2 { color: #58a6ff; font-size: 1.8em; border-bottom: 2px solid #238636; padding-bottom: 5px; margin-top: 30px; }
-        p { margin-bottom: 15px; }
+        /* HEADERS E LOGO */
+        .socialfibr-logo { display: block; max-width: 150px; margin: 0 auto 10px auto; } 
+        h1 { color: #f7931a; font-size: 2.8em; text-align: center; margin-bottom: 15px; line-height: 1.2; }
+        h2 { color: #58a6ff; font-size: 2em; text-align: center; margin-top: 0; margin-bottom: 25px; }
+        .sub-headline { font-size: 1.4em; text-align: center; color: #aaaaaa; margin-bottom: 40px; }
         strong { color: #f0f6fc; }
+        
+        /* VIDEO PLACEHOLDER (VSL STYLE) */
+        .vsl-placeholder { width: 100%; height: auto; max-width: 650px; margin: 0 auto 30px auto; background-color: #161b22; border: 4px solid #f7931a; border-radius: 10px; padding: 150px 0; text-align: center; font-size: 1.5em; font-weight: bold; color: #f0f6fc; }
 
-        /* DESTAQUE DE CRÍTICO (DOR/ALERTA) */
-        .alerta { background-color: #ff3838; color: #ffffff; padding: 15px; border-radius: 5px; margin-bottom: 25px; font-weight: bold; text-align: center; }
-
-        /* SEÇÃO DE BENEFÍCIOS */
-        .beneficios-lista { list-style: none; padding: 0; }
-        .beneficios-lista li { background: #161b22; padding: 10px; margin-bottom: 10px; border-left: 5px solid #238636; border-radius: 3px; }
-        .beneficios-lista li::before { content: '✅ '; font-weight: bold; }
-
-        /* IMAGEM DO PRODUTO */
-        .ebook-img { display: block; max-width: 70%; height: auto; margin: 30px auto; border: 3px solid #f7931a; border-radius: 8px; box-shadow: 0 0 20px rgba(247, 147, 26, 0.5); }
-
-        /* CTA (CALL TO ACTION) */
+        /* CTA BUTTON (CONVERSION FOCUSED) */
         .cta-button {
             display: block;
-            width: 90%;
+            width: 95%;
             margin: 20px auto;
-            padding: 20px;
-            background-color: #238636; /* Cor de sucesso/conversão */
+            padding: 25px;
+            background-color: #238636; /* Verde de Conversão */
             color: white;
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 12px;
             transition: background-color 0.3s;
-            box-shadow: 0 4px 15px rgba(35, 134, 54, 0.6);
+            box-shadow: 0 6px 20px rgba(35, 134, 54, 0.7);
+            animation: pulse 1.5s infinite; /* Efeito de atenção */
         }
         .cta-button:hover { background-color: #2ea043; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.02); } 100% { transform: scale(1); } }
 
-        /* GARANTIA */
-        .garantia { background-color: #161b22; padding: 20px; border: 2px dashed #f7931a; border-radius: 8px; text-align: center; margin-top: 40px; }
+        /* OFFER STACK */
+        .offer-stack { background-color: #161b22; padding: 30px; border-radius: 10px; text-align: center; margin-top: 30px; }
+        .offer-stack h3 { color: #f7931a; font-size: 1.6em; margin-bottom: 20px; }
+        .stack-item { background: #21262d; padding: 15px; margin-bottom: 10px; border-radius: 5px; text-align: left; }
+        .stack-item strong { color: #ffffff; }
 
-        /* LOGO SOCIALFIBR */
-        .socialfibr-logo { display: block; max-width: 150px; margin: 0 auto 30px auto; } /* Ajuste max-width conforme necessário */
+        /* PRICING */
+        .pricing-box { background-color: #21262d; border: 3px solid #f7931a; border-radius: 15px; padding: 30px; margin-top: 40px; text-align: center; }
+        .pricing-box .original { text-decoration: line-through; color: #aaaaaa; font-size: 1.5em; }
+        .pricing-box .current { font-size: 3.5em; color: #238636; font-weight: bold; margin: 5px 0; }
+        .pricing-box .value-phrase { font-size: 1.2em; color: #f0f6fc; }
+
+        /* GUARANTEE */
+        .garantia { background-color: #161b22; padding: 25px; border: 2px dashed #58a6ff; border-radius: 8px; text-align: center; margin-top: 40px; }
+
+        /* FAQ */
+        .faq-item { margin-bottom: 15px; border-bottom: 1px solid #161b22; padding-bottom: 10px; }
+        .faq-item strong { display: block; margin-bottom: 5px; color: #f7931a; }
     </style>
 </head>
 <body>
@@ -58,65 +67,104 @@
     
     <header>
         <img src="[LINK_DO_LOGO_SOCIALFIBR]" alt="Logo Socialfibr Web3 Brasil" class="socialfibr-logo">
-
-        <div class="alerta">
-            🚨 ALERTA: NÃO PERCA SEU BITCOIN! Hacks e Golpes Aumentam a Cada Dia.
-        </div>
-        <h1>Cripto Blindada: Aprenda a Autocustódia Perfeita e Nunca Mais Perca Seu Bitcoin.</h1>
-        <p style="text-align: center; font-size: 1.2em; color: #aaaaaa;">O Guia Prático e Definitivo que Transforma Você no Guardião Inabalável do Seu Patrimônio Digital.</p>
         
+        <h1 style="color: #ff3838; font-size: 3em;">🚨 ALERTA: Seu Bitcoin Está Em RISCO AGORA!</h1>
+        <h1 style="color: #f7931a;">Descubra o Método da Autocustódia Perfeita Para Blindar Seu Patrimônio de Hacks e Golpes</h1>
+        <p class="sub-headline">Apenas 10 minutos podem salvar sua carteira. Assista e descubra a ÚNICA forma de ter paz no mercado cripto.</p>
+
+        <div class="vsl-placeholder">
+            [Aqui entra o player do seu VÍDEO DE VENDAS (VSL)]
+            <br><p style="font-size: 1em; margin-top: 10px;">(Duração ideal: 5 a 15 minutos)</p>
+        </div>
+
         <a href="https://pay.kiwify.com.br/EqCaJUf" class="cta-button">
-            QUERO MINHA CRIPTO BLINDADA AGORA!
+            SIM! QUERO A SEGURANÇA IMEDIATA DA CRIPTO BLINDADA
         </a>
     </header>
 
-    <img src="[Link da Imagem da Capa]" alt="Capa do E-book Cripto Blindada" class="ebook-img">
-
-    <section id="dores">
-        <h2>💔 Você Está Arriscando Seu Futuro Cripto Agora?</h2>
-        <p>A segurança é o elo mais fraco. Se você tem R$1.000 ou mais em cripto, você é um alvo. Pergunte a si mesmo:</p>
-        <ul class="beneficios-lista" style="border-left: none;">
-            <li style="border-left: 5px solid #ff3838;">Sua **Seed Phrase** está protegida contra desastres e erros?</li>
-            <li style="border-left: 5px solid #ff3838;">Você confia 100% na **Exchange** para guardar o seu patrimônio?</li>
-            <li style="border-left: 5px solid #ff3838;">Você sabe diferenciar um site de **Phishing** de uma carteira real?</li>
-        </ul>
-        <p style="color: #f7931a; font-weight: bold;">A verdade é que a falta de conhecimento básico está custando MILHÕES em perdas todos os anos.</p>
-    </section>
-
-    <section id="solucao">
-        <h2>🔑 O Segredo da Autocustódia Perfeita Está Aqui.</h2>
-        <p>O e-book "Cripto Blindada" é o atalho para a tranquilidade. Você vai dominar:</p>
-        <ul class="beneficios-lista">
-            <li>Domínio da **Seed Phrase**: Aprenda o sistema de proteção de nível militar para sua Palavra-Semente.</li>
-            <li>**Hardware Wallet** Sem Mistérios: Guia prático para configurar e operar sua Ledger ou Trezor sem cometer erros fatais.</li>
-            <li>O **Método 3-2-1** de Backup: O sistema que garante que você NUNCA mais perderá seus ativos, mesmo em casos de desastre.</li>
-            <li>Defesa Contra **Scams**: Identifique e neutralize golpes de Telegram, DMs e extensões de navegador falsas.</li>
-        </ul>
-    </section>
-
-    <section id="oferta">
-        <h2 style="text-align: center;">🔥 Oferta por Tempo Limitado + BÔNUS EXCLUSIVO</h2>
-        <p style="text-align: center; font-size: 1.1em;">Poupe-se de meses de pesquisa e o risco de perdas catastróficas. Leve o conhecimento completo agora:</p>
-        <p style="text-align: center; text-decoration: line-through; color: #aaaaaa;">De R$ 197,00</p>
-        <p style="text-align: center; font-size: 2em; color: #238636; font-weight: bold; margin: 0;">Por Apenas:</p>
-        <p style="text-align: center; font-size: 3em; color: #f7931a; font-weight: bold; margin: 5px 0 20px 0;">R$ 47,00</p>
-        
-        <div class="garantia">
-            <h3>GARANTIA BLINDADA DE 7 DIAS</h3>
-            <p>Se em 7 dias você não sentir que sua segurança aumentou 100%, devolvemos todo o seu investimento. Risco zero para você.</p>
+    <section class="section" id="prova-social">
+        <h2>O Que Estão Dizendo Sobre a Autocustódia...</h2>
+        <div style="display: flex; justify-content: space-between; gap: 20px;">
+            <div class="stack-item" style="width: 50%;">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <strong>João S. (Trader):</strong> "O risco nas Exchanges era meu maior medo. O 'Cripto Blindada' me deu o método exato para usar minha Hardware Wallet sem medo. Paz de espírito garantida!"
+            </div>
+            <div class="stack-item" style="width: 50%;">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <strong>Maria C. (Iniciante):</strong> "Achei que segurança era complexa, mas o passo a passo da Seed Phrase é simples e eficaz. O valor é irrisório perto do que o e-book protege."
+            </div>
         </div>
-        
-        <a href="https://pay.kiwify.com.br/EqCaJUf" class="cta-button">
-            SIM! QUERO BLINDAR MINHAS CRIPTOMOEDAS AGORA!
-        </a>
+    </section>
+
+    <section class="section" id="conteudo-principal">
+        <h2>O Que Você Receberá Exatamente (O SEGREDO DA BLINDAGEM)</h2>
+        <img src="[Link da Imagem da Capa]" alt="Capa do E-book Cripto Blindada" style="display: block; max-width: 250px; margin: 20px auto; border-radius: 8px;">
+
+        <div class="offer-stack">
+            <h3>MÓDULO 1: O FIM DA DEPENDÊNCIA DE EXCHANGES</h3>
+            <div class="stack-item">Você aprenderá por que Exchanges como Binance e Kraken não são cofres e como o **Hack** de uma delas pode zerar sua conta.</div>
+            
+            <h3>MÓDULO 2: DOMÍNIO TOTAL DA SEED PHRASE</h3>
+            <div class="stack-item">O Guia militar para proteger suas 12/24 palavras-chave. Inclui o sistema de redundância do **Método 3-2-1** contra incêndios, roubos e desastres naturais.</div>
+            
+            <h3>MÓDULO 3: HARDWARE WALLET SEM ERROS</h3>
+            <div class="stack-item">Passo a passo visual para configurar sua Ledger ou Trezor. Como fazer o **primeiro envio e recebimento** e como proceder em caso de perda do dispositivo.</div>
+            
+            <h3>MÓDULO 4: DEFESA DIGITAL AVANÇADA</h3>
+            <div class="stack-item">As técnicas PRO para identificar **Phishing, Scams no Telegram e ataques de engenharia social** antes que eles roubem seu dinheiro.</div>
+        </div>
+    </section>
+
+    <section class="section" id="bonus" style="text-align: center;">
+        <h2 style="color: #f7931a;">🎁 BÔNUS DE AÇÃO RÁPIDA (Valor Inestimável)</h2>
+        <div class="offer-stack">
+            <h3 style="color: #ffffff;">CHECKLIST EXCLUSIVO: AUTOCUSTÓDIA PERFEITA</h3>
+            <p>O Checklist de 10 Mandamentos para você **aplicar em 5 minutos** e auditar sua segurança imediatamente após a leitura do e-book. Imprima e use como seu Manual de Bordo.</p>
+        </div>
+    </section>
+
+    <section class="section" id="pricing">
+        <h2 style="color: #ff3838;">O Preço da Segurança é Inegociável. Mas o E-book é Acessível.</h2>
+        <p style="text-align: center;">O custo de um hack é de 100% do seu patrimônio. O custo da blindagem é irrisório.</p>
+
+        <div class="pricing-box">
+            <p class="original">De: R$ 197,00</p>
+            <p class="value-phrase">Somente Hoje por:</p>
+            <p class="current">R$ 47,00</p>
+            <p style="font-size: 1.5em; font-weight: bold;">ou 12x de R$ 4,79</p>
+
+            <a href="https://pay.kiwify.com.br/EqCaJUf" class="cta-button">
+                QUERO BLINDAR MINHA CRIPTO AGORA!
+            </a>
+        </div>
+    </section>
+
+    <section class="garantia" id="garantia">
+        <h2>🛡️ GARANTIA BLINDADA DE RISCO ZERO</h2>
+        <p>Você tem **7 dias** para ler o e-book e aplicar o método. Se você não sentir que sua segurança melhorou em 100% ou não estiver satisfeito por qualquer motivo, nos avise e devolveremos **100% do seu dinheiro**. Sem perguntas. Seu risco é zero.</p>
+    </section>
+
+    <section class="section" id="faq">
+        <h2>Dúvidas Frequentes (FAQ)</h2>
+        <div class="faq-item">
+            <strong>1. Preciso ter uma Hardware Wallet (Ledger/Trezor) para usar o e-book?</strong>
+            <p>Não. O e-book cobre a segurança em todos os níveis. Se você não tem uma Hardware Wallet, ele mostra por que e qual comprar, mas ensina a proteger sua Seed Phrase de formas eficazes mesmo sem ela.</p>
+        </div>
+        <div class="faq-item">
+            <strong>2. Este guia é para quem está começando agora?</strong>
+            <p>Sim. A linguagem é acessível, mas o conhecimento é de nível avançado. É ideal para iniciantes que querem começar com o pé direito e para investidores intermediários que querem corrigir vícios perigosos.</p>
+        </div>
+        <div class="faq-item">
+            <strong>3. Quanto tempo leva para aplicar o método?</strong>
+            <p>O Checklist de Autocustódia pode ser aplicado em menos de 10 minutos. O e-book foi feito para ser lido em uma tarde, e as mudanças de segurança são imediatas.</p>
+        </div>
     </section>
 
     <footer style="text-align: center; font-size: 0.8em; padding: 20px 0; color: #444c56;">
-        Copyright © 2025 Cripto Blindada. Todos os Direitos Reservados.
+        Copyright © 2025 Cripto Blindada por Socialfibr Web3 Brasil. Todos os Direitos Reservados.
     </footer>
 
 </div>
 
 </body>
 </html>
-```http://googleusercontent.com/image_generation_content/3
