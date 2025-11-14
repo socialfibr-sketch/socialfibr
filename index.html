@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         /* --- [ 1. CONFIGURAÇÕES GERAIS E VARIÁVEIS ] --- */
         :root {
@@ -410,7 +412,7 @@
             color: var(--cor-texto-secundario);
             margin: 0 10px;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.5rem; /* Aumenta o tamanho do ícone */
             transition: color 0.3s ease;
         }
         
@@ -631,10 +633,10 @@
 
                 <footer>
                     <div class="social-links">
-                        <a href="https://www.youtube.com/channel/UCK6u_21hSJm9UvzGx_094Fw" target="_blank" title="YouTube">Yt</a>
-                        <a href="https://www.tiktok.com/@socialfibr" target="_blank" title="TikTok">Tk</a>
-                        <a href="https://www.instagram.com/socialfibrasil" target="_blank" title="Instagram">Ig</a>
-                        <a href="https://x.com/SocialFiBR" target="_blank" title="X (Twitter)">X</a>
+                        <a href="https://bio.site/socialfibr" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://bio.site/socialfibr" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://bio.site/socialfibr" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://bio.site/socialfibr" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                     </div>
                     <div class="footer-links">
                         <a href="#">Termos de Uso</a>
@@ -654,7 +656,7 @@
             
             // --- Interatividade do Pagamento ---
             const radioPix = document.getElementById('opt-pix');
-            const radioCripto = document.getElementById('opt-cripto');
+            const radioCrito = document.getElementById('opt-cripto');
             const detalhesPix = document.getElementById('detalhes-pix');
             const detalhesCripto = document.getElementById('detalhes-cripto');
 
@@ -665,7 +667,7 @@
                 }
             });
 
-            radioCripto.addEventListener('change', function() {
+            radioCrito.addEventListener('change', function() {
                 if (this.checked) {
                     detalhesPix.style.display = 'none';
                     detalhesCripto.style.display = 'block';
@@ -673,8 +675,6 @@
             });
 
             // --- Interatividade de Rolagem Suave (Smooth Scroll) ---
-            // (Note: O 'scroll-behavior: smooth;' no CSS já faz isso na maioria dos navegadores modernos,
-            // mas isso é um fallback para garantir)
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
