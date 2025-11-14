@@ -217,44 +217,67 @@
             border-top: 1px solid var(--cor-fundo-secundaria);
         }
 
-        /* --- [ 6. SEÇÃO CONTATO (RODAPÉ) ] --- */
-        #contato {
+        /* --- [ 6. *** NOVA SEÇÃO *** YOUTUBE SHORTS ] --- */
+        #youtube-shorts {
             background-color: var(--cor-fundo-secundaria);
+        }
+        
+        #youtube-shorts h2 .fa-youtube {
+            color: #FF0000; /* Cor vermelha do YouTube */
+        }
+
+        .shorts-carousel {
+            display: flex;
+            overflow-x: auto; /* A mágica do carrossel */
+            padding: 20px 10px;
+            gap: 20px;
+            scroll-snap-type: x mandatory; /* Efeito de "trava" */
+            /* Estilizando a barra de rolagem para navegadores WebKit */
+            scrollbar-width: thin;
+            scrollbar-color: var(--cor-primaria) var(--cor-fundo);
+        }
+        
+        .shorts-carousel::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .shorts-carousel::-webkit-scrollbar-track {
+            background: var(--cor-fundo);
+            border-radius: 10px;
+        }
+        
+        .shorts-carousel::-webkit-scrollbar-thumb {
+            background-color: var(--cor-primaria);
+            border-radius: 10px;
+        }
+
+        .short-video {
+            flex: 0 0 auto; /* Impede que os vídeos encolham */
+            width: 315px; /* Largura padrão de embed do Short */
+            height: 560px; /* Altura padrão de embed do Short */
+            border-radius: 12px; /* Shorts têm bordas arredondadas */
+            overflow: hidden;
+            scroll-snap-align: start; /* Ponto de "trava" */
+            border: 1px solid var(--cor-fundo-card);
+        }
+
+        .short-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* --- [ 7. SEÇÃO RODAPÉ (Antiga Seção Contato) ] --- */
+        #rodape {
+            background-color: var(--cor-fundo); /* Alterna a cor de fundo */
             text-align: center;
         }
-        form {
-            max-width: 600px;
-            margin: 30px auto 50px auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
+        
+        #rodape footer {
+            border-top: 1px solid var(--cor-fundo-secundaria);
+            padding-top: 40px;
         }
-        form input, form textarea {
-            width: 100%;
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid var(--cor-fundo-secundaria);
-            background-color: var(--cor-fundo-card);
-            color: var(--cor-texto);
-            font-size: 1rem;
-        }
-        form textarea { min-height: 150px; resize: vertical; }
-        .btn-enviar {
-            background-color: var(--cor-primaria);
-            color: var(--cor-fundo);
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .btn-enviar:hover { background-color: #00b38a; }
-        footer {
-            border-top: 1px solid #0e0e1a;
-            padding-top: 30px;
-        }
+        
         .social-links a {
             color: var(--cor-texto-secundario);
             margin: 0 10px;
@@ -271,24 +294,20 @@
         }
         .footer-links a:hover { color: var(--cor-primaria); }
 
-        /* --- [ 7. *** NOVOS ESTILOS *** MODAL DE CHECKOUT ] --- */
+        /* --- [ 8. ESTILOS DO MODAL DE CHECKOUT ] --- */
         .modal-overlay {
-            display: none; /* Escondido por padrão */
+            display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(5px);
             z-index: 2000;
         }
-        
         .checkout-modal {
-            display: none; /* Escondido por padrão */
+            display: none;
             position: fixed;
-            top: 50%;
-            left: 50%;
+            top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             background-color: var(--cor-fundo-card);
             padding: 30px;
@@ -298,11 +317,9 @@
             max-width: 600px;
             border: 1px solid var(--cor-primaria);
         }
-        
         .modal-close {
             position: absolute;
-            top: 10px;
-            right: 20px;
+            top: 10px; right: 20px;
             color: var(--cor-texto-secundario);
             font-size: 2.5rem;
             font-weight: 700;
@@ -310,7 +327,6 @@
             line-height: 1;
         }
         .modal-close:hover { color: var(--cor-primaria); }
-
         .checkout-modal h2 { text-align: left; }
         .checkout-item {
             display: flex;
@@ -320,8 +336,7 @@
             padding-bottom: 20px;
         }
         .checkout-item-img {
-            width: 100px;
-            height: 100px;
+            width: 100px; height: 100px;
             background-color: #333;
             border-radius: 5px;
             display: flex;
@@ -335,8 +350,6 @@
             font-weight: 700;
             color: var(--cor-primaria);
         }
-
-        /* Estilos de Pagamento (copiados da seção antiga) */
         .pagamento-opcoes {
             display: flex;
             justify-content: center;
@@ -360,11 +373,9 @@
             border-color: var(--cor-primaria);
         }
         .pagamento-detalhes { text-align: center; }
-        .pagamento-detalhes > div { display: none; } /* Oculta todos por padrão */
-        
+        .pagamento-detalhes > div { display: none; }
         .qr-code-placeholder {
-            width: 200px;
-            height: 200px;
+            width: 200px; height: 200px;
             background-color: #fff;
             margin: 20px auto;
             display: flex;
@@ -383,7 +394,7 @@
             color: var(--cor-texto-secundario);
         }
         
-        /* --- [ 8. RESPONSIVIDADE (MOBILE) ] --- */
+        /* --- [ 9. RESPONSIVIDADE (MOBILE) ] --- */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             h2 { font-size: 1.8rem; }
@@ -392,6 +403,12 @@
             nav { justify-content: space-between; }
             .conceito-container { flex-direction: column; }
             .pagamento-opcoes { flex-direction: column; }
+
+            /* Ajuste para o carrossel de shorts não ficar tão grande */
+            .short-video {
+                width: 270px; /* Um pouco menor para caber melhor */
+                height: 480px;
+            }
         }
         
     </style>
@@ -405,8 +422,7 @@
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#ebooks">Ebooks</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+                <li><a href="#youtube-shorts">Vídeos</a></li> </ul>
             <a href="#ebooks" class="cta-button">Ver Ebooks</a>
         </nav>
     </header>
@@ -440,7 +456,6 @@
                             <a class="btn-comprar" data-modal="modal-ebook1">Comprar Agora</a>
                         </div>
                     </div>
-                    
                     <div class="ebook-card">
                         <div class="ebook-imagem-placeholder">Capa Ebook 2</div>
                         <div class="ebook-conteudo">
@@ -450,7 +465,6 @@
                             <a class="btn-comprar" data-modal="modal-ebook2">Comprar Agora</a>
                         </div>
                     </div>
-
                     <div class="ebook-card">
                         <div class="ebook-imagem-placeholder">Capa Ebook 3</div>
                         <div class="ebook-conteudo">
@@ -484,22 +498,61 @@
             </div>
         </section>
 
-        <section id="contato">
+        <section id="youtube-shorts">
             <div class="container">
-                <h2>📧 Entre em Contato</h2>
-                <p>Tem alguma dúvida ou sugestão? Envie para nós!</p>
-                <form>
-                    <input type="text" placeholder="Seu Nome" required>
-                    <input type="email" placeholder="Seu E-mail" required>
-                    <textarea placeholder="Sua Mensagem"></textarea>
-                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
-                </form>
-                <footer>
+                <h2><i class="fab fa-youtube"></i> Nossos Shorts Recentes</h2>
+                <p style="text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Veja nossas dicas rápidas e análises direto do YouTube. Arraste para o lado para ver mais!
+                </p>
+                
+                <div class="shorts-carousel">
+                    
+                    <div class="short-video">
+                        <iframe src="https://www.youtube.com/embed/WkPBh-G1U5w" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="short-video">
+                        <iframe src="https://www.youtube.com/embed/ClI2c83c2G4" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="short-video">
+                        <iframe src="https://www.youtube.com/embed/i4KYGvE-r-U" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="short-video">
+                        <iframe src="https://www.youtube.com/embed/FTLzrtS5o-s" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rodape">
+            <div class="container" style="padding-bottom: 20px; padding-top: 0;"> <footer>
                     <div class="social-links">
                         <a href="https://bio.site/socialfibr" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="https://bio.site/socialfibr" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
                         <a href="https://bio.site/socialfibr" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://bio.site/socialfibr" target="_blank" title="X (Twitter)"><i class="fab fa-x"></i></a>
+                        <a href="https://bio.site/socialfibr" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
                     </div>
                     <div class="footer-links">
                         <a href="#">Termos de Uso</a>
@@ -519,7 +572,6 @@
     <div id="modal-ebook1" class="checkout-modal">
         <span class="modal-close">&times;</span>
         <h2>Finalizar Compra</h2>
-        
         <div class="checkout-item">
             <div class="checkout-item-img">Capa 1</div>
             <div class="checkout-item-details">
@@ -527,16 +579,15 @@
                 <span class="price">R$ 49,90</span>
             </div>
         </div>
-        
         <div class="pagamento-opcoes">
             <input type="radio" id="opt-pix-1" name="payment-method-1" checked>
             <label for="opt-pix-1">PIX ⚡ (Instantâneo)</label>
             <input type="radio" id="opt-cripto-1" name="payment-method-1">
             <label for="opt-cripto-1">Criptomoedas ₿</label>
         </div>
-        
         <div class="pagamento-detalhes">
-            <div id="detalhes-pix-1" style="display: block;"> <h3>Pague com PIX</h3>
+            <div id="detalhes-pix-1" style="display: block;">
+                <h3>Pague com PIX</h3>
                 <p>Use o QR Code abaixo ou o Copia e Cola.</p>
                 <div class="qr-code-placeholder">[ QR Code PIX R$ 49,90 ]</div>
                 <div class="code-box">000201...[codigo-pix-ebook1]...5303986</div>
@@ -553,7 +604,6 @@
     <div id="modal-ebook2" class="checkout-modal">
         <span class="modal-close">&times;</span>
         <h2>Finalizar Compra</h2>
-        
         <div class="checkout-item">
             <div class="checkout-item-img">Capa 2</div>
             <div class="checkout-item-details">
@@ -561,16 +611,15 @@
                 <span class="price">R$ 79,90</span>
             </div>
         </div>
-        
         <div class="pagamento-opcoes">
             <input type="radio" id="opt-pix-2" name="payment-method-2" checked>
             <label for="opt-pix-2">PIX ⚡ (Instantâneo)</label>
             <input type="radio" id="opt-cripto-2" name="payment-method-2">
             <label for="opt-cripto-2">Criptomoedas ₿</label>
         </div>
-        
         <div class="pagamento-detalhes">
-            <div id="detalhes-pix-2" style="display: block;"> <h3>Pague com PIX</h3>
+            <div id="detalhes-pix-2" style="display: block;">
+                <h3>Pague com PIX</h3>
                 <p>Use o QR Code abaixo ou o Copia e Cola.</p>
                 <div class="qr-code-placeholder">[ QR Code PIX R$ 79,90 ]</div>
                 <div class="code-box">000201...[codigo-pix-ebook2]...5303986</div>
@@ -587,7 +636,6 @@
     <div id="modal-ebook3" class="checkout-modal">
         <span class="modal-close">&times;</span>
         <h2>Finalizar Compra</h2>
-        
         <div class="checkout-item">
             <div class="checkout-item-img">Capa 3</div>
             <div class="checkout-item-details">
@@ -595,16 +643,15 @@
                 <span class="price">R$ 99,90</span>
             </div>
         </div>
-        
         <div class="pagamento-opcoes">
             <input type="radio" id="opt-pix-3" name="payment-method-3" checked>
             <label for="opt-pix-3">PIX ⚡ (Instantâneo)</label>
             <input type="radio" id="opt-cripto-3" name="payment-method-3">
             <label for="opt-cripto-3">Criptomoedas ₿</label>
         </div>
-        
         <div class="pagamento-detalhes">
-            <div id="detalhes-pix-3" style="display: block;"> <h3>Pague com PIX</h3>
+            <div id="detalhes-pix-3" style="display: block;">
+                <h3>Pague com PIX</h3>
                 <p>Use o QR Code abaixo ou o Copia e Cola.</p>
                 <div class="qr-code-placeholder">[ QR Code PIX R$ 99,90 ]</div>
                 <div class="code-box">000201...[codigo-pix-ebook3]...5303986</div>
@@ -656,7 +703,7 @@
                 const detalhesPix = document.getElementById(pixDetailsId);
                 const detalhesCripto = document.getElementById(criptoDetailsId);
 
-                if(radioPix) { // Verifica se os elementos existem antes de adicionar listeners
+                if(radioPix) {
                     radioPix.addEventListener('change', function() {
                         if (this.checked) {
                             detalhesPix.style.display = 'block';
