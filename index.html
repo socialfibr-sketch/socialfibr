@@ -20,6 +20,25 @@
         
         /* VIDEO PLACEHOLDER (VSL STYLE) */
         .vsl-placeholder { width: 100%; height: auto; max-width: 650px; margin: 0 auto 30px auto; background-color: #161b22; border: 4px solid #f7931a; border-radius: 10px; padding: 150px 0; text-align: center; font-size: 1.5em; font-weight: bold; color: #f0f6fc; }
+        /* Se você tiver um código de embed de vídeo, você substituiria o conteúdo desta div */
+        .vsl-iframe-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 0 auto 30px auto;
+            max-width: 650px;
+            border: 4px solid #f7931a;
+            border-radius: 10px;
+        }
+        .vsl-iframe-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
         /* CTA BUTTON (CONVERSION FOCUSED) */
         .cta-button {
@@ -66,17 +85,20 @@
 <div class="container">
     
     <header>
-        <img src="[LINK_DO_LOGO_SOCIALFIBR]" alt="Logo Socialfibr Web3 Brasil" class="socialfibr-logo">
+        <img src="https://media.bio.site/sites/2da06f38-f258-4f6b-a882-3f11175f7838/ZoKDtTLNoKmYyjZW4iY4xR.jpg" alt="Logo Socialfibr Web3 Brasil" class="socialfibr-logo">
         
         <h1 style="color: #ff3838; font-size: 3em;">🚨 ALERTA: Seu Bitcoin Está Em RISCO AGORA!</h1>
         <h1 style="color: #f7931a;">Descubra o Método da Autocustódia Perfeita Para Blindar Seu Patrimônio de Hacks e Golpes</h1>
         <p class="sub-headline">Apenas 10 minutos podem salvar sua carteira. Assista e descubra a ÚNICA forma de ter paz no mercado cripto.</p>
 
-        <div class="vsl-placeholder">
-            [Aqui entra o player do seu VÍDEO DE VENDAS (VSL)]
-            <br><p style="font-size: 1em; margin-top: 10px;">(Duração ideal: 5 a 15 minutos)</p>
+        <div class="vsl-iframe-wrapper">
+            <iframe 
+                src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </div>
-
         <a href="https://pay.kiwify.com.br/EqCaJUf" class="cta-button">
             SIM! QUERO A SEGURANÇA IMEDIATA DA CRIPTO BLINDADA
         </a>
@@ -151,20 +173,4 @@
             <p>Não. O e-book cobre a segurança em todos os níveis. Se você não tem uma Hardware Wallet, ele mostra por que e qual comprar, mas ensina a proteger sua Seed Phrase de formas eficazes mesmo sem ela.</p>
         </div>
         <div class="faq-item">
-            <strong>2. Este guia é para quem está começando agora?</strong>
-            <p>Sim. A linguagem é acessível, mas o conhecimento é de nível avançado. É ideal para iniciantes que querem começar com o pé direito e para investidores intermediários que querem corrigir vícios perigosos.</p>
-        </div>
-        <div class="faq-item">
-            <strong>3. Quanto tempo leva para aplicar o método?</strong>
-            <p>O Checklist de Autocustódia pode ser aplicado em menos de 10 minutos. O e-book foi feito para ser lido em uma tarde, e as mudanças de segurança são imediatas.</p>
-        </div>
-    </section>
-
-    <footer style="text-align: center; font-size: 0.8em; padding: 20px 0; color: #444c56;">
-        Copyright © 2025 Cripto Blindada por Socialfibr Web3 Brasil. Todos os Direitos Reservados.
-    </footer>
-
-</div>
-
-</body>
-</html>
+            <strong>2. Este guia é para quem
