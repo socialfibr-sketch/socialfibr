@@ -8,14 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
         /* --- [ 1. CONFIGURAÇÕES GERAIS E VARIÁVEIS ] --- */
         :root {
-            --cor-primaria: #00e0b0; /* Um verde-menta vibrante */
-            --cor-fundo: #0e0e1a; /* Um azul-escuro/preto */
+            --cor-primaria: #00e0b0;
+            --cor-fundo: #0e0e1a;
             --cor-fundo-secundaria: #1a1a2e;
             --cor-texto: #f0f0f0;
             --cor-texto-secundario: #a0a0b0;
@@ -23,16 +22,8 @@
         }
 
         /* Reset Básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--cor-fundo);
@@ -46,31 +37,22 @@
             padding: 40px 20px;
         }
 
-        section {
-            padding: 60px 0;
-        }
-
+        section { padding: 60px 0; }
         h1, h2, h3 {
             font-weight: 700;
             margin-bottom: 20px;
             color: var(--cor-primaria);
         }
-
         h1 { font-size: 3rem; }
         h2 { font-size: 2.2rem; text-align: center; }
         h3 { font-size: 1.5rem; }
-
-        p {
-            color: var(--cor-texto-secundario);
-            margin-bottom: 20px;
-        }
+        p { color: var(--cor-texto-secundario); margin-bottom: 20px; }
         
         /* --- [ 2. CABEÇALHO (HEADER) ] --- */
         header {
             position: fixed;
             width: 100%;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             background-color: rgba(14, 14, 26, 0.8);
             backdrop-filter: blur(10px);
             z-index: 1000;
@@ -93,25 +75,15 @@
             text-decoration: none;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 30px;
-        }
-
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
         nav ul li a {
             text-decoration: none;
             color: var(--cor-texto);
             font-weight: 600;
             transition: color 0.3s ease;
         }
-
-        nav ul li a:hover {
-            color: var(--cor-primaria);
-        }
+        nav ul li a:hover { color: var(--cor-primaria); }
 
         .cta-button {
             background-color: var(--cor-primaria);
@@ -122,29 +94,20 @@
             font-weight: 700;
             transition: transform 0.3s ease;
         }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-        }
+        .cta-button:hover { transform: scale(1.05); }
 
         /* --- [ 3. SEÇÃO INÍCIO (HERO) & CONCEITO ] --- */
         #inicio {
-            padding-top: 150px; /* Espaço para o header fixo */
+            padding-top: 150px;
             text-align: center;
             background: linear-gradient(180deg, var(--cor-fundo) 0%, var(--cor-fundo-secundaria) 100%);
         }
-
-        #inicio h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-        }
-
+        #inicio h1 { font-size: 3.5rem; line-height: 1.2; }
         #inicio .subtitulo {
             font-size: 1.2rem;
             max-width: 600px;
             margin: 20px auto 40px auto;
         }
-
         .conceito-container {
             display: flex;
             justify-content: space-around;
@@ -152,7 +115,6 @@
             margin-top: 50px;
             flex-wrap: wrap;
         }
-
         .conceito-card {
             background-color: var(--cor-fundo-card);
             padding: 30px;
@@ -162,23 +124,16 @@
             text-align: left;
             border: 1px solid var(--cor-fundo-secundaria);
         }
-        
-        .conceito-card h3 {
-            color: var(--cor-texto);
-        }
+        .conceito-card h3 { color: var(--cor-texto); }
 
         /* --- [ 4. SEÇÃO EBOOKS ] --- */
-        #ebooks {
-            background-color: var(--cor-fundo-secundaria);
-        }
-
+        #ebooks { background-color: var(--cor-fundo-secundaria); }
         .ebooks-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
-
         .ebook-card {
             background-color: var(--cor-fundo-card);
             border-radius: 10px;
@@ -188,12 +143,10 @@
             border: 1px solid #333;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .ebook-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0, 224, 176, 0.1);
         }
-        
         .ebook-imagem-placeholder {
             height: 200px;
             background-color: #333;
@@ -205,29 +158,20 @@
             color: var(--cor-primaria);
             text-transform: uppercase;
         }
-
         .ebook-conteudo {
             padding: 25px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
-
-        .ebook-conteudo h3 {
-            color: var(--cor-texto);
-        }
-        
-        .ebook-conteudo p {
-            flex-grow: 1;
-        }
-
+        .ebook-conteudo h3 { color: var(--cor-texto); }
+        .ebook-conteudo p { flex-grow: 1; }
         .ebook-preco {
             font-size: 1.8rem;
             font-weight: 900;
             color: var(--cor-primaria);
             margin: 15px 0;
         }
-
         .btn-comprar {
             display: block;
             width: 100%;
@@ -239,32 +183,166 @@
             font-weight: 700;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            cursor: pointer; /* Importante para JS */
         }
-
-        .btn-comprar:hover {
-            background-color: #00b38a;
-        }
+        .btn-comprar:hover { background-color: #00b38a; }
         
-        /* --- [ 5. SEÇÃO PAGAMENTO ] --- */
-        #pagamento {
-            background-color: var(--cor-fundo);
-        }
-
-        .pagamento-container {
-            max-width: 800px;
-            margin: 40px auto;
+        /* --- [ 5. SEÇÃO FAQ ] --- */
+        #faq { background-color: var(--cor-fundo); }
+        .faq-container { max-width: 800px; margin: 30px auto; }
+        details {
             background-color: var(--cor-fundo-card);
-            padding: 40px;
-            border-radius: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 1px solid var(--cor-fundo-secundaria);
+        }
+        summary {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            position: relative;
+        }
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 1.5rem;
+            color: var(--cor-primaria);
+            transition: transform 0.2s ease;
+        }
+        details[open] summary::after { transform: rotate(45deg); }
+        .faq-resposta {
+            padding: 0 20px 20px 20px;
+            border-top: 1px solid var(--cor-fundo-secundaria);
+        }
+
+        /* --- [ 6. SEÇÃO CONTATO (RODAPÉ) ] --- */
+        #contato {
+            background-color: var(--cor-fundo-secundaria);
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 30px auto 50px auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid var(--cor-fundo-secundaria);
+            background-color: var(--cor-fundo-card);
+            color: var(--cor-texto);
+            font-size: 1rem;
+        }
+        form textarea { min-height: 150px; resize: vertical; }
+        .btn-enviar {
+            background-color: var(--cor-primaria);
+            color: var(--cor-fundo);
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-enviar:hover { background-color: #00b38a; }
+        footer {
+            border-top: 1px solid #0e0e1a;
+            padding-top: 30px;
+        }
+        .social-links a {
+            color: var(--cor-texto-secundario);
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover { color: var(--cor-primaria); }
+        .footer-links { margin: 20px 0; }
+        .footer-links a {
+            color: var(--cor-texto-secundario);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .footer-links a:hover { color: var(--cor-primaria); }
+
+        /* --- [ 7. *** NOVOS ESTILOS *** MODAL DE CHECKOUT ] --- */
+        .modal-overlay {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
         }
         
+        .checkout-modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--cor-fundo-card);
+            padding: 30px;
+            border-radius: 10px;
+            z-index: 2001;
+            width: 90%;
+            max-width: 600px;
+            border: 1px solid var(--cor-primaria);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: var(--cor-texto-secundario);
+            font-size: 2.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            line-height: 1;
+        }
+        .modal-close:hover { color: var(--cor-primaria); }
+
+        .checkout-modal h2 { text-align: left; }
+        .checkout-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--cor-fundo-secundaria);
+            padding-bottom: 20px;
+        }
+        .checkout-item-img {
+            width: 100px;
+            height: 100px;
+            background-color: #333;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        .checkout-item-details h3 { color: var(--cor-texto); }
+        .checkout-item-details .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--cor-primaria);
+        }
+
+        /* Estilos de Pagamento (copiados da seção antiga) */
         .pagamento-opcoes {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-bottom: 30px;
         }
-        
         .pagamento-opcoes label {
             cursor: pointer;
             padding: 15px 30px;
@@ -272,26 +350,17 @@
             border-radius: 5px;
             font-weight: 600;
             transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
         }
-        
-        .pagamento-opcoes input[type="radio"] {
-            display: none;
-        }
-
+        .pagamento-opcoes input[type="radio"] { display: none; }
         .pagamento-opcoes input[type="radio"]:checked + label {
             background-color: var(--cor-primaria);
             color: var(--cor-fundo);
             border-color: var(--cor-primaria);
         }
-        
-        .pagamento-detalhes {
-            text-align: center;
-        }
-
-        /* Oculta detalhes por padrão */
-        #detalhes-pix, #detalhes-cripto {
-            display: none;
-        }
+        .pagamento-detalhes { text-align: center; }
+        .pagamento-detalhes > div { display: none; } /* Oculta todos por padrão */
         
         .qr-code-placeholder {
             width: 200px;
@@ -304,7 +373,6 @@
             color: #333;
             font-weight: 600;
         }
-        
         .code-box {
             background-color: var(--cor-fundo);
             padding: 15px;
@@ -314,150 +382,16 @@
             margin-top: 15px;
             color: var(--cor-texto-secundario);
         }
-
-        /* --- [ 6. SEÇÃO FAQ ] --- */
-        #faq {
-            background-color: var(--cor-fundo-secundaria);
-        }
-        
-        .faq-container {
-            max-width: 800px;
-            margin: 30px auto;
-        }
-        
-        details {
-            background-color: var(--cor-fundo-card);
-            border-radius: 5px;
-            margin-bottom: 10px;
-            border: 1px solid var(--cor-fundo-secundaria);
-        }
-        
-        summary {
-            padding: 20px;
-            font-weight: 600;
-            cursor: pointer;
-            list-style: none; /* Remove a seta padrão */
-            position: relative;
-        }
-        
-        summary::after {
-            content: '+'; /* Símbolo de "mais" */
-            position: absolute;
-            right: 20px;
-            font-size: 1.5rem;
-            color: var(--cor-primaria);
-            transition: transform 0.2s ease;
-        }
-        
-        details[open] summary::after {
-            transform: rotate(45deg); /* Gira para "x" */
-        }
-        
-        .faq-resposta {
-            padding: 0 20px 20px 20px;
-            border-top: 1px solid var(--cor-fundo-secundaria);
-        }
-
-        /* --- [ 7. SEÇÃO CONTATO (RODAPÉ) ] --- */
-        #contato {
-            background-color: var(--cor-fundo);
-            text-align: center;
-        }
-        
-        form {
-            max-width: 600px;
-            margin: 30px auto 50px auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-        
-        form input, form textarea {
-            width: 100%;
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid var(--cor-fundo-secundaria);
-            background-color: var(--cor-fundo-card);
-            color: var(--cor-texto);
-            font-size: 1rem;
-        }
-        
-        form textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .btn-enviar {
-            background-color: var(--cor-primaria);
-            color: var(--cor-fundo);
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        
-        .btn-enviar:hover {
-            background-color: #00b38a;
-        }
-        
-        footer {
-            border-top: 1px solid var(--cor-fundo-secundaria);
-            padding-top: 30px;
-        }
-        
-        .social-links a {
-            color: var(--cor-texto-secundario);
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 1.5rem; /* Aumenta o tamanho do ícone */
-            transition: color 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            color: var(--cor-primaria);
-        }
-        
-        .footer-links {
-            margin: 20px 0;
-        }
-        
-        .footer-links a {
-            color: var(--cor-texto-secundario);
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        .footer-links a:hover {
-            color: var(--cor-primaria);
-        }
         
         /* --- [ 8. RESPONSIVIDADE (MOBILE) ] --- */
         @media (max-width: 768px) {
             h1 { font-size: 2.5rem; }
             h2 { font-size: 1.8rem; }
             
-            nav ul {
-                display: none; /* Simplificação para o preview. Em um site real, seria um menu hamburguer */
-            }
-            
-            nav {
-                justify-content: space-between;
-            }
-            
-            nav .cta-button {
-                display: none; /* Esconde o botão no nav mobile */
-            }
-
-            .conceito-container {
-                flex-direction: column;
-            }
-            
-            .pagamento-opcoes {
-                flex-direction: column;
-            }
+            nav ul, nav .cta-button { display: none; }
+            nav { justify-content: space-between; }
+            .conceito-container { flex-direction: column; }
+            .pagamento-opcoes { flex-direction: column; }
         }
         
     </style>
@@ -470,7 +404,6 @@
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#ebooks">Ebooks</a></li>
-                <li><a href="#pagamento">Pagamento</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -479,7 +412,6 @@
     </header>
 
     <main>
-
         <section id="inicio">
             <div class="container">
                 <h1>Sua Jornada Descomplicada no Mundo Cripto Começa Aqui!</h1>
@@ -487,20 +419,10 @@
                     Esqueça o jargão técnico. Nossa missão é transformar o aprendizado em uma experiência 
                     intuitiva, prática e acessível com o método "Aprender, Aplicar e Prosperar".
                 </p>
-
                 <div class="conceito-container">
-                    <div class="conceito-card">
-                        <h3>🎓 Aprender</h3>
-                        <p>Fundamentos Sólidos em Blockchain, Bitcoin e o ecossistema cripto de forma clara e objetiva.</p>
-                    </div>
-                    <div class="conceito-card">
-                        <h3>🔒 Aplicar</h3>
-                        <p>Foco total em segurança. Lições essenciais para proteger seus ativos e evitar golpes (scams).</p>
-                    </div>
-                    <div class="conceito-card">
-                        <h3>🚀 Prosperar</h3>
-                        <p>Guias passo a passo para criar sua carteira, comprar, e entender as principais exchanges.</p>
-                    </div>
+                    <div class="conceito-card"><h3>🎓 Aprender</h3><p>Fundamentos Sólidos em Blockchain, Bitcoin e o ecossistema cripto.</p></div>
+                    <div class="conceito-card"><h3>🔒 Aplicar</h3><p>Foco total em segurança. Lições essenciais para proteger seus ativos e evitar golpes.</p></div>
+                    <div class="conceito-card"><h3>🚀 Prosperar</h3><p>Guias passo a passo para criar sua carteira, comprar, e entender as exchanges.</p></div>
                 </div>
             </div>
         </section>
@@ -508,7 +430,6 @@
         <section id="ebooks">
             <div class="container">
                 <h2>📚 Nossa Biblioteca Essencial</h2>
-                
                 <div class="ebooks-grid">
                     <div class="ebook-card">
                         <div class="ebook-imagem-placeholder">Capa Ebook 1</div>
@@ -516,7 +437,7 @@
                             <h3>Cripto Descomplicada: O Guia do Iniciante</h3>
                             <p>O que é Blockchain, como funciona o Bitcoin, primeiros passos na compra e armazenamento seguro.</p>
                             <span class="ebook-preco">R$ 49,90</span>
-                            <a href="#pagamento" class="btn-comprar">Comprar Agora</a>
+                            <a class="btn-comprar" data-modal="modal-ebook1">Comprar Agora</a>
                         </div>
                     </div>
                     
@@ -524,9 +445,9 @@
                         <div class="ebook-imagem-placeholder">Capa Ebook 2</div>
                         <div class="ebook-conteudo">
                             <h3>Segurança Cripto: Proteja seus Ativos</h3>
-                            <p>Fundamentos de segurança, o perigo das carteiras quentes (hot) e frias (cold), como evitar phishing e golpes.</p>
+                            <p>Fundamentos de segurança, carteiras quentes (hot) e frias (cold), como evitar phishing e golpes.</p>
                             <span class="ebook-preco">R$ 79,90</span>
-                            <a href="#pagamento" class="btn-comprar">Comprar Agora</a>
+                            <a class="btn-comprar" data-modal="modal-ebook2">Comprar Agora</a>
                         </div>
                     </div>
 
@@ -536,47 +457,7 @@
                             <h3>Dominando as NFTs: Arte e Colecionáveis</h3>
                             <p>Guia completo sobre Tokens Não Fungíveis, como comprar, vender (mintar) e criar seus próprios NFTs.</p>
                             <span class="ebook-preco">R$ 99,90</span>
-                            <a href="#pagamento" class="btn-comprar">Comprar Agora</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pagamento">
-            <div class="container">
-                <h2>💳 Pagamento Simples e Inovador</h2>
-                
-                <div class="pagamento-container">
-                    <p style="text-align: center;">Selecione seu método de pagamento preferido. (O carrinho seria adicionado aqui em um site real. Por enquanto, selecione o método para ver as instruções).</p>
-                    
-                    <div class="pagamento-opcoes">
-                        <input type="radio" id="opt-pix" name="payment-method">
-                        <label for="opt-pix">PIX ⚡ (Instantâneo)</label>
-                        
-                        <input type="radio" id="opt-cripto" name="payment-method">
-                        <label for="opt-cripto">Criptomoedas ₿ (BTC/ETH)</label>
-                    </div>
-                    
-                    <div class="pagamento-detalhes">
-                        <div id="detalhes-pix">
-                            <h3>Pague com PIX</h3>
-                            <p>Use o QR Code abaixo ou o Copia e Cola para pagamento imediato.</p>
-                            <div class="qr-code-placeholder">[ QR Code PIX ]</div>
-                            <div class="code-box">
-                                <strong>Copia e Cola:</strong><br>
-                                00020126...[seu-codigo-pix]...5303986
-                            </div>
-                        </div>
-
-                        <div id="detalhes-cripto">
-                            <h3>Pague com Cripto (BTC)</h3>
-                            <p>Envie o valor exato para o endereço abaixo. A liberação ocorre após 3 confirmações na rede.</p>
-                            <div class="code-box">
-                                <strong>Endereço BTC:</strong><br>
-                                bc1qxy2kgdygjrsqtzq2n0yrf2493...
-                            </div>
-                            <p style="margin-top: 10px;"><strong>Valor:</strong> 0.00018 BTC</p>
+                            <a class="btn-comprar" data-modal="modal-ebook3">Comprar Agora</a>
                         </div>
                     </div>
                 </div>
@@ -587,33 +468,17 @@
             <div class="container">
                 <h2>❓ Dúvidas Frequentes</h2>
                 <div class="faq-container">
-                    
                     <details>
                         <summary>Como recebo o ebook após o pagamento?</summary>
-                        <div class="faq-resposta">
-                            <p>O acesso é imediato! Após a confirmação do pagamento (instantâneo via PIX ou após as confirmações da rede cripto), um link para download será enviado diretamente para o seu e-mail cadastrado no checkout.</p>
-                        </div>
+                        <div class="faq-resposta"><p>O acesso é imediato! Após a confirmação do pagamento (instantâneo via PIX ou após as confirmações da rede cripto), um link para download será enviado diretamente para o seu e-mail.</p></div>
                     </details>
-                    
                     <details>
                         <summary>O conteúdo é para iniciantes mesmo?</summary>
-                        <div class="faq-resposta">
-                            <p>Absolutamente. Nosso "Guia do Iniciante" e o "Segurança Cripto" foram escritos do zero, pensando em quem nunca teve contato com o mercado. Usamos uma linguagem simples, direta e sem o "economês" que assusta.</p>
-                        </div>
+                        <div class="faq-resposta"><p>Absolutamente. Nossos guias foram escritos do zero, pensando em quem nunca teve contato com o mercado. Usamos uma linguagem simples e direta.</p></div>
                     </details>
-
                     <details>
                         <summary>Os ebooks são atualizados?</summary>
-                        <div class="faq-resposta">
-                            <p>Sim. O mercado cripto é extremamente dinâmico. Nossos ebooks são revisados e atualizados trimestralmente para garantir que você tenha as informações mais recentes sobre segurança e tendências.</p>
-                        </div>
-                    </details>
-                    
-                    <details>
-                        <summary>É seguro pagar com criptomoedas?</summary>
-                        <div class="faq-resposta">
-                            <p>Sim. Utilizamos um gateway de pagamento seguro. Apenas certifique-se de copiar o endereço da carteira (wallet) e o valor exato corretamente. Não nos responsabilizamos por envios para endereços errados.</p>
-                        </div>
+                        <div class="faq-resposta"><p>Sim. O mercado cripto é dinâmico. Nossos ebooks são revisados e atualizados trimestralmente para garantir as informações mais recentes.</p></div>
                     </details>
                 </div>
             </div>
@@ -623,14 +488,12 @@
             <div class="container">
                 <h2>📧 Entre em Contato</h2>
                 <p>Tem alguma dúvida ou sugestão? Envie para nós!</p>
-
                 <form>
                     <input type="text" placeholder="Seu Nome" required>
                     <input type="email" placeholder="Seu E-mail" required>
                     <textarea placeholder="Sua Mensagem"></textarea>
                     <button type="submit" class="btn-enviar">Enviar Mensagem</button>
                 </form>
-
                 <footer>
                     <div class="social-links">
                         <a href="https://bio.site/socialfibr" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -651,41 +514,181 @@
         
     </main>
 
+    <div id="modal-overlay" class="modal-overlay"></div>
+
+    <div id="modal-ebook1" class="checkout-modal">
+        <span class="modal-close">&times;</span>
+        <h2>Finalizar Compra</h2>
+        
+        <div class="checkout-item">
+            <div class="checkout-item-img">Capa 1</div>
+            <div class="checkout-item-details">
+                <h3>Cripto Descomplicada: O Guia do Iniciante</h3>
+                <span class="price">R$ 49,90</span>
+            </div>
+        </div>
+        
+        <div class="pagamento-opcoes">
+            <input type="radio" id="opt-pix-1" name="payment-method-1" checked>
+            <label for="opt-pix-1">PIX ⚡ (Instantâneo)</label>
+            <input type="radio" id="opt-cripto-1" name="payment-method-1">
+            <label for="opt-cripto-1">Criptomoedas ₿</label>
+        </div>
+        
+        <div class="pagamento-detalhes">
+            <div id="detalhes-pix-1" style="display: block;"> <h3>Pague com PIX</h3>
+                <p>Use o QR Code abaixo ou o Copia e Cola.</p>
+                <div class="qr-code-placeholder">[ QR Code PIX R$ 49,90 ]</div>
+                <div class="code-box">000201...[codigo-pix-ebook1]...5303986</div>
+            </div>
+            <div id="detalhes-cripto-1">
+                <h3>Pague com Cripto (BTC)</h3>
+                <p>Envie o valor exato para o endereço abaixo.</p>
+                <div class="code-box">bc1q...[endereco-btc-ebook1]...</div>
+                <p style="margin-top: 10px;"><strong>Valor:</strong> 0.00018 BTC</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-ebook2" class="checkout-modal">
+        <span class="modal-close">&times;</span>
+        <h2>Finalizar Compra</h2>
+        
+        <div class="checkout-item">
+            <div class="checkout-item-img">Capa 2</div>
+            <div class="checkout-item-details">
+                <h3>Segurança Cripto: Proteja seus Ativos</h3>
+                <span class="price">R$ 79,90</span>
+            </div>
+        </div>
+        
+        <div class="pagamento-opcoes">
+            <input type="radio" id="opt-pix-2" name="payment-method-2" checked>
+            <label for="opt-pix-2">PIX ⚡ (Instantâneo)</label>
+            <input type="radio" id="opt-cripto-2" name="payment-method-2">
+            <label for="opt-cripto-2">Criptomoedas ₿</label>
+        </div>
+        
+        <div class="pagamento-detalhes">
+            <div id="detalhes-pix-2" style="display: block;"> <h3>Pague com PIX</h3>
+                <p>Use o QR Code abaixo ou o Copia e Cola.</p>
+                <div class="qr-code-placeholder">[ QR Code PIX R$ 79,90 ]</div>
+                <div class="code-box">000201...[codigo-pix-ebook2]...5303986</div>
+            </div>
+            <div id="detalhes-cripto-2">
+                <h3>Pague com Cripto (BTC)</h3>
+                <p>Envie o valor exato para o endereço abaixo.</p>
+                <div class="code-box">bc1q...[endereco-btc-ebook2]...</div>
+                <p style="margin-top: 10px;"><strong>Valor:</strong> 0.00029 BTC</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-ebook3" class="checkout-modal">
+        <span class="modal-close">&times;</span>
+        <h2>Finalizar Compra</h2>
+        
+        <div class="checkout-item">
+            <div class="checkout-item-img">Capa 3</div>
+            <div class="checkout-item-details">
+                <h3>Dominando as NFTs: Arte e Colecionáveis</h3>
+                <span class="price">R$ 99,90</span>
+            </div>
+        </div>
+        
+        <div class="pagamento-opcoes">
+            <input type="radio" id="opt-pix-3" name="payment-method-3" checked>
+            <label for="opt-pix-3">PIX ⚡ (Instantâneo)</label>
+            <input type="radio" id="opt-cripto-3" name="payment-method-3">
+            <label for="opt-cripto-3">Criptomoedas ₿</label>
+        </div>
+        
+        <div class="pagamento-detalhes">
+            <div id="detalhes-pix-3" style="display: block;"> <h3>Pague com PIX</h3>
+                <p>Use o QR Code abaixo ou o Copia e Cola.</p>
+                <div class="qr-code-placeholder">[ QR Code PIX R$ 99,90 ]</div>
+                <div class="code-box">000201...[codigo-pix-ebook3]...5303986</div>
+            </div>
+            <div id="detalhes-cripto-3">
+                <h3>Pague com Cripto (BTC)</h3>
+                <p>Envie o valor exato para o endereço abaixo.</p>
+                <div class="code-box">bc1q...[endereco-btc-ebook3]...</div>
+                <p style="margin-top: 10px;"><strong>Valor:</strong> 0.00036 BTC</p>
+            </div>
+        </div>
+    </div>
+
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             
-            // --- Interatividade do Pagamento ---
-            const radioPix = document.getElementById('opt-pix');
-            const radioCrito = document.getElementById('opt-cripto');
-            const detalhesPix = document.getElementById('detalhes-pix');
-            const detalhesCripto = document.getElementById('detalhes-cripto');
+            const overlay = document.getElementById('modal-overlay');
+            const comprarBtns = document.querySelectorAll('.btn-comprar');
+            const closeBtns = document.querySelectorAll('.modal-close');
+            const modals = document.querySelectorAll('.checkout-modal');
 
-            radioPix.addEventListener('change', function() {
-                if (this.checked) {
-                    detalhesPix.style.display = 'block';
-                    detalhesCripto.style.display = 'none';
-                }
+            // --- Função para ABRIR o modal ---
+            comprarBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const modalId = this.dataset.modal;
+                    const modal = document.getElementById(modalId);
+                    
+                    overlay.style.display = 'block';
+                    modal.style.display = 'block';
+                });
             });
 
-            radioCrito.addEventListener('change', function() {
-                if (this.checked) {
-                    detalhesPix.style.display = 'none';
-                    detalhesCripto.style.display = 'block';
+            // --- Função para FECHAR o modal ---
+            function closeModal() {
+                overlay.style.display = 'none';
+                modals.forEach(modal => modal.style.display = 'none');
+            }
+
+            closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+            overlay.addEventListener('click', closeModal);
+
+            
+            // --- Função REUTILIZÁVEL para controlar o toggle de pagamento ---
+            function setupPaymentToggle(pixRadioId, criptoRadioId, pixDetailsId, criptoDetailsId) {
+                const radioPix = document.getElementById(pixRadioId);
+                const radioCripto = document.getElementById(criptoRadioId);
+                const detalhesPix = document.getElementById(pixDetailsId);
+                const detalhesCripto = document.getElementById(criptoDetailsId);
+
+                if(radioPix) { // Verifica se os elementos existem antes de adicionar listeners
+                    radioPix.addEventListener('change', function() {
+                        if (this.checked) {
+                            detalhesPix.style.display = 'block';
+                            detalhesCripto.style.display = 'none';
+                        }
+                    });
                 }
-            });
+                
+                if(radioCripto) {
+                    radioCripto.addEventListener('change', function() {
+                        if (this.checked) {
+                            detalhesPix.style.display = 'none';
+                            detalhesCripto.style.display = 'block';
+                        }
+                    });
+                }
+            }
+
+            // Configura o toggle para CADA modal
+            setupPaymentToggle('opt-pix-1', 'opt-cripto-1', 'detalhes-pix-1', 'detalhes-cripto-1');
+            setupPaymentToggle('opt-pix-2', 'opt-cripto-2', 'detalhes-pix-2', 'detalhes-cripto-2');
+            setupPaymentToggle('opt-pix-3', 'opt-cripto-3', 'detalhes-pix-3', 'detalhes-cripto-3');
+
 
             // --- Interatividade de Rolagem Suave (Smooth Scroll) ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
                     const targetId = this.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
-                    
                     if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
                     }
                 });
             });
