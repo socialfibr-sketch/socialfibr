@@ -133,13 +133,31 @@
         }
         .conceito-card h3 { color: var(--cor-texto); }
         
-        /* --- [ 4. SEÇÃO APRENDA (NOVA SEÇÃO) ] --- */
+        /* --- [ 4. SEÇÃO APRENDA (APP EMBUTIDO) ] --- */
         #aprenda-app {
-            background-color: var(--cor-fundo);
+            background-color: var(--cor-fundo-secundaria); /* Alterno a cor de fundo */
+            padding: 80px 0;
+            text-align: center;
+        }
+        .app-container {
+            max-width: 900px;
+            margin: 0 auto;
+            height: 600px; /* Altura padrão para um app web */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 224, 176, 0.2); /* Sombra para destacar */
+            border: 3px solid var(--cor-primaria);
         }
 
+        .embedded-app {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        
         /* --- [ 5. SEÇÃO EBOOKS ] --- */
-        #ebooks { background-color: var(--cor-fundo-secundaria); }
+        #ebooks { background-color: var(--cor-fundo); } /* Cor ajustada para ter contraste */
         .ebooks-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -200,11 +218,11 @@
         .btn-comprar:hover { background-color: #00b38a; }
         
         /* --- [ 6. SEÇÃO FAQ ] --- */
-        #faq { background-color: var(--cor-fundo); }
+        #faq { background-color: var(--cor-fundo-secundaria); } /* Cor ajustada para ter contraste */
 
         /* --- [ 7. SEÇÃO YOUTUBE SHORTS ] --- */
         #youtube-shorts {
-            background-color: var(--cor-fundo-secundaria);
+            background-color: var(--cor-fundo);
         }
         
         #youtube-shorts h2 .fa-youtube {
@@ -253,12 +271,12 @@
 
         /* --- [ 8. SEÇÃO RODAPÉ ] --- */
         #rodape {
-            background-color: var(--cor-fundo);
+            background-color: var(--cor-fundo-secundaria);
             text-align: center;
         }
         
         #rodape footer {
-            border-top: 1px solid var(--cor-fundo-secundaria);
+            border-top: 1px solid var(--cor-fundo);
             padding-top: 40px;
         }
         
@@ -279,21 +297,77 @@
         .footer-links a:hover { color: var(--cor-primaria); }
 
         /* --- [ 9. MODAL DE CHECKOUT ] --- */
-        .modal-overlay { display: none; /* ... (estilos de modal) */ }
-        .checkout-modal { display: none; /* ... (estilos de modal) */ }
-        .modal-close { /* ... */ }
+        .modal-overlay { 
+            display: none; 
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            z-index: 2000;
+        }
+        .checkout-modal { 
+            display: none; 
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--cor-fundo-card);
+            padding: 30px;
+            border-radius: 10px;
+            z-index: 2001;
+            width: 90%;
+            max-width: 600px;
+            border: 1px solid var(--cor-primaria);
+        }
+        .modal-close {
+            position: absolute;
+            top: 10px; right: 20px;
+            color: var(--cor-texto-secundario);
+            font-size: 2.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            line-height: 1;
+        }
         .modal-close:hover { color: var(--cor-primaria); }
         .checkout-modal h2 { text-align: left; }
-        .checkout-item { /* ... */ }
-        .checkout-item-img { /* ... */ }
+        .checkout-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--cor-fundo-secundaria);
+            padding-bottom: 20px;
+        }
+        .checkout-item-img {
+            width: 100px; height: 100px;
+            background-color: #333;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
         .checkout-item-details h3 { color: var(--cor-texto); }
         .checkout-item-details .price {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--cor-primaria);
         }
-        .pagamento-opcoes { /* ... */ }
-        .pagamento-opcoes label { /* ... */ }
+        .pagamento-opcoes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .pagamento-opcoes label {
+            cursor: pointer;
+            padding: 15px 30px;
+            border: 2px solid var(--cor-fundo-secundaria);
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
+        }
         .pagamento-opcoes input[type="radio"] { display: none; }
         .pagamento-opcoes input[type="radio"]:checked + label {
             background-color: var(--cor-primaria);
@@ -302,8 +376,25 @@
         }
         .pagamento-detalhes { text-align: center; }
         .pagamento-detalhes > div { display: none; }
-        .qr-code-placeholder { /* ... */ }
-        .code-box { /* ... */ }
+        .qr-code-placeholder {
+            width: 200px; height: 200px;
+            background-color: #fff;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-weight: 600;
+        }
+        .code-box {
+            background-color: var(--cor-fundo);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            word-wrap: break-word;
+            margin-top: 15px;
+            color: var(--cor-texto-secundario);
+        }
         
         /* --- [ 10. RESPONSIVIDADE (MOBILE) ] --- */
         @media (max-width: 768px) {
@@ -318,6 +409,9 @@
             .short-video {
                 width: 270px;
                 height: 480px;
+            }
+            .app-container {
+                height: 500px; /* Ajuste para mobile */
             }
         }
         
@@ -357,18 +451,25 @@
             </div>
         </section>
 
-        <section id="aprenda-app" style="background-color: var(--cor-fundo); text-align: center; padding: 80px 0;">
+        <section id="aprenda-app">
             <div class="container">
-                <h2>🧠 Chat Interativo: Aprenda Cripto Sem Complicações</h2>
-                <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px auto;">
-                    Desenvolvemos uma ferramenta de chat simples e direta para você tirar dúvidas sobre o mercado cripto e Bitcoin
-                    de forma instantânea, seguindo nosso conceito educacional.
+                <h2>🧠 App de Aprendizado Cripto Simples</h2>
+                <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px auto; color: var(--cor-texto);">
+                    Aprenda sobre o mercado cripto e Bitcoin de forma simples e interativa com nosso aplicativo exclusivo, 
+                    integrado diretamente nesta página.
                 </p>
-                <a href="https://gemini.google.com/share/d3a6bc6a12dc" target="_blank" class="cta-button" style="padding: 15px 35px; font-size: 1.3rem; border-radius: 8px;">
-                    CLIQUE AQUI E COMECE A APRENDER AGORA!
-                </a>
+                
+                <div class="app-container">
+                    <iframe 
+                        src="https://script.google.com/macros/s/AKfycbzAOLAdgw4iPVfbAHoI8RIFAzD3vOInmDyFUATe-ei3f-YofeHWyDc0SZyNJT52vbDf8Q/exec" 
+                        frameborder="0" 
+                        allowfullscreen
+                        class="embedded-app"
+                        title="Aplicativo Interativo de Aprendizado Cripto">
+                    </iframe>
+                </div>
                 <p style="margin-top: 15px; color: var(--cor-texto-secundario); font-size: 0.9rem;">
-                    (Você será redirecionado para a nossa ferramenta de chat em uma nova aba do navegador.)
+                    Se o aplicativo não carregar, verifique suas configurações de segurança ou tente em outro navegador.
                 </p>
             </div>
         </section>
