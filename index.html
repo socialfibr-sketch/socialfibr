@@ -133,31 +133,104 @@
         }
         .conceito-card h3 { color: var(--cor-texto); }
         
-        /* --- [ 4. SEÇÃO APRENDA (APP EMBUTIDO) ] --- */
+        /* --- [ 4. *** NOVO *** CHAT APRENDA ] --- */
         #aprenda-app {
-            background-color: var(--cor-fundo-secundaria); /* Alterno a cor de fundo */
+            background-color: var(--cor-fundo-secundaria);
             padding: 80px 0;
             text-align: center;
         }
-        .app-container {
-            max-width: 900px;
-            margin: 0 auto;
-            height: 600px; /* Altura padrão para um app web */
-            border-radius: 10px;
+        .chat-container {
+            max-width: 800px;
+            margin: 30px auto 0;
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 0 20px rgba(0, 224, 176, 0.2); /* Sombra para destacar */
-            border: 3px solid var(--cor-primaria);
+            box-shadow: 0 0 25px rgba(0, 224, 176, 0.3);
+            background-color: var(--cor-fundo-card);
         }
 
-        .embedded-app {
-            width: 100%;
-            height: 100%;
+        #chat-messages {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            text-align: left;
+            background-color: #15152a; /* Um tom ligeiramente mais claro que o card */
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            max-width: 85%;
+        }
+
+        .message-user {
+            align-self: flex-end;
+            align-items: flex-end;
+        }
+
+        .message-ai {
+            align-self: flex-start;
+            align-items: flex-start;
+        }
+
+        .message-bubble {
+            padding: 12px;
+            border-radius: 18px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            color: var(--cor-texto);
+        }
+
+        .message-user .message-bubble {
+            background-color: var(--cor-primaria);
+            color: var(--cor-fundo);
+            border-bottom-right-radius: 4px;
+        }
+
+        .message-ai .message-bubble {
+            background-color: var(--cor-fundo-secundaria);
+            border: 1px solid #333;
+            border-bottom-left-radius: 4px;
+        }
+        
+        #chat-input-form {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #333;
+            background-color: var(--cor-fundo-card);
+        }
+        
+        #chat-input-form input {
+            flex-grow: 1;
+            padding: 12px;
+            border: 1px solid #444;
+            border-radius: 20px;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+        
+        #chat-input-form button {
+            background-color: var(--cor-primaria);
+            color: var(--cor-fundo);
             border: none;
-            display: block;
+            padding: 0 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        #chat-input-form button:hover {
+            background-color: #00b38a;
         }
         
         /* --- [ 5. SEÇÃO EBOOKS ] --- */
-        #ebooks { background-color: var(--cor-fundo); } /* Cor ajustada para ter contraste */
+        #ebooks { background-color: var(--cor-fundo); }
         .ebooks-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -218,7 +291,7 @@
         .btn-comprar:hover { background-color: #00b38a; }
         
         /* --- [ 6. SEÇÃO FAQ ] --- */
-        #faq { background-color: var(--cor-fundo-secundaria); } /* Cor ajustada para ter contraste */
+        #faq { background-color: var(--cor-fundo-secundaria); }
 
         /* --- [ 7. SEÇÃO YOUTUBE SHORTS ] --- */
         #youtube-shorts {
@@ -411,7 +484,7 @@
                 height: 480px;
             }
             .app-container {
-                height: 500px; /* Ajuste para mobile */
+                height: 500px;
             }
         }
         
@@ -422,7 +495,7 @@
     <header>
         <nav>
             <a href="#inicio" class="logo">
-                <img src="https://placehold.co/180x50/0e0e1a/00e0b0?text=SocialFibr+Logo" alt="SocialFibr Logo">
+                <img src="socialfibr-logo-horizontal.svg" alt="SocialFibr Logo Vetorizada">
             </a>
             <ul>
                 <li><a href="#inicio">Início</a></li>
@@ -436,6 +509,7 @@
     </header>
 
     <main>
+        <!-- SEÇÃO 1: INÍCIO E CONCEITO -->
         <section id="inicio">
             <div class="container">
                 <h1>Sua Jornada Descomplicada no Mundo Cripto Começa Aqui!</h1>
@@ -451,29 +525,35 @@
             </div>
         </section>
 
+        <!-- ==============================================
+        *** SEÇÃO 4: APRENDA - CHAT EMBUTIDO (REPRODUZIDO) ***
+        ============================================== -->
         <section id="aprenda-app">
             <div class="container">
-                <h2>🧠 App de Aprendizado Cripto Simples</h2>
+                <h2>🧠 Tutor Cripto AI: Tire Suas Dúvidas Simples</h2>
                 <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px auto; color: var(--cor-texto);">
-                    Aprenda sobre o mercado cripto e Bitcoin de forma simples e interativa com nosso aplicativo exclusivo, 
-                    integrado diretamente nesta página.
+                    Pergunte sobre **Bitcoin**, **Blockchain**, **Segurança** ou **o que é cripto** e receba respostas instantâneas.
                 </p>
                 
-                <div class="app-container">
-                    <iframe 
-                        src="https://script.google.com/macros/s/AKfycbzAOLAdgw4iPVfbAHoI8RIFAzD3vOInmDyFUATe-ei3f-YofeHWyDc0SZyNJT52vbDf8Q/exec" 
-                        frameborder="0" 
-                        allowfullscreen
-                        class="embedded-app"
-                        title="Aplicativo Interativo de Aprendizado Cripto">
-                    </iframe>
+                <div class="chat-container">
+                    <div id="chat-messages">
+                        <!-- Mensagem de boas-vindas da IA -->
+                        <div class="message message-ai">
+                            <div class="message-bubble">
+                                Olá! Eu sou seu Tutor Cripto. Pronto para aprender! Pergunte-me sobre **Bitcoin**, **Blockchain**, **Segurança** ou **o que é cripto**.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form id="chat-input-form">
+                        <input type="text" id="user-input" placeholder="Digite sua pergunta aqui..." required>
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
-                <p style="margin-top: 15px; color: var(--cor-texto-secundario); font-size: 0.9rem;">
-                    Se o aplicativo não carregar, verifique suas configurações de segurança ou tente em outro navegador.
-                </p>
             </div>
         </section>
         
+        <!-- SEÇÃO 5: EBOOKS -->
         <section id="ebooks">
             <div class="container">
                 <h2>📚 Nossa Biblioteca Essencial</h2>
@@ -509,6 +589,7 @@
             </div>
         </section>
 
+        <!-- SEÇÃO 6: FAQ -->
         <section id="faq">
             <div class="container">
                 <h2>❓ Dúvidas Frequentes</h2>
@@ -529,6 +610,7 @@
             </div>
         </section>
 
+        <!-- SEÇÃO 7: YOUTUBE SHORTS -->
         <section id="youtube-shorts">
             <div class="container">
                 <h2><i class="fab fa-youtube"></i> Nossos Shorts Recentes</h2>
@@ -577,6 +659,7 @@
             </div>
         </section>
 
+        <!-- SEÇÃO 8: RODAPÉ -->
         <section id="rodape">
             <div class="container" style="padding-bottom: 20px; padding-top: 0;"> <footer>
                     <div class="social-links">
@@ -598,6 +681,7 @@
         
     </main>
 
+    <!-- MODAIS DE CHECKOUT -->
     <div id="modal-overlay" class="modal-overlay"></div>
 
     <div id="modal-ebook1" class="checkout-modal">
@@ -698,36 +782,115 @@
 
 
     <script>
+        // Objeto de Conhecimento Simples para o Tutor Cripto
+        const knowledgeBase = {
+            'bitcoin': 'O Bitcoin (BTC) é a primeira criptomoeda. É uma moeda digital descentralizada, o que significa que não é controlada por bancos ou governos. Foi criado em 2009 e é o mais famoso ativo digital.',
+            'blockchain': 'A Blockchain (ou "cadeia de blocos") é a tecnologia por trás do Bitcoin. É um livro-razão digital e distribuído que registra todas as transações de forma segura, transparente e imutável.',
+            'seguranca': 'Segurança é crucial! Nunca compartilhe suas chaves privadas ou seed phrase (a sequência de 12 ou 24 palavras) com ninguém. Use autenticação de dois fatores (2FA) e pesquise bem antes de investir.',
+            'o que é cripto': 'Criptomoedas são moedas digitais e virtuais que utilizam criptografia para garantir a segurança das transações. Elas permitem a transferência de valor diretamente entre as pessoas (P2P), sem intermediários.',
+            'defi': 'DeFi significa Finanças Descentralizadas. É um ecossistema de aplicações financeiras construídas em blockchain (principalmente Ethereum) que visam recriar serviços bancários de forma aberta e sem permissão.',
+            'nft': 'NFTs (Tokens Não Fungíveis) são ativos digitais únicos que representam a propriedade de itens como arte, colecionáveis ou terrenos virtuais. Cada NFT tem um valor e uma identidade diferente.',
+        };
+
         document.addEventListener('DOMContentLoaded', function() {
             
+            // --- Variáveis do Chat ---
+            const chatForm = document.getElementById('chat-input-form');
+            const chatMessages = document.getElementById('chat-messages');
+            const userInput = document.getElementById('user-input');
+
+            // --- Função para adicionar mensagem no chat ---
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', `message-${sender}`);
+                
+                const bubble = document.createElement('div');
+                bubble.classList.add('message-bubble');
+                
+                // Simula o efeito de digitação apenas para a IA
+                if (sender === 'ai') {
+                    bubble.textContent = '...';
+                    messageDiv.appendChild(bubble);
+                    chatMessages.appendChild(messageDiv);
+                    scrollToBottom();
+
+                    // Efeito de digitação (timeout)
+                    setTimeout(() => {
+                        bubble.textContent = text;
+                        scrollToBottom();
+                    }, 800); 
+
+                } else {
+                    bubble.textContent = text;
+                    messageDiv.appendChild(bubble);
+                    chatMessages.appendChild(messageDiv);
+                    scrollToBottom();
+                }
+            }
+            
+            // --- Função de rolagem automática ---
+            function scrollToBottom() {
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            // --- Lógica de Resposta da IA ---
+            function getAiResponse(question) {
+                const normalizedQuestion = question.toLowerCase().trim();
+                
+                // Tenta encontrar uma resposta na base de conhecimento
+                for (const key in knowledgeBase) {
+                    if (normalizedQuestion.includes(key)) {
+                        return knowledgeBase[key];
+                    }
+                }
+
+                // Resposta padrão
+                return 'Desculpe, não entendi sua pergunta. Lembre-se, posso responder sobre **Bitcoin, Blockchain, Segurança, DeFi, NFTs** ou **o que é cripto**.';
+            }
+
+            // --- Evento de Envio do Formulário ---
+            chatForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const question = userInput.value.trim();
+
+                if (question === '') return;
+
+                // 1. Adiciona a mensagem do usuário
+                addMessage(question, 'user');
+
+                // 2. Obtém e adiciona a resposta da IA
+                const response = getAiResponse(question);
+                addMessage(response, 'ai');
+
+                // 3. Limpa o input
+                userInput.value = '';
+            });
+
+            
+            // --- Lógica de Modais e Checkouts (Mantida) ---
             const overlay = document.getElementById('modal-overlay');
             const comprarBtns = document.querySelectorAll('.btn-comprar');
             const closeBtns = document.querySelectorAll('.modal-close');
             const modals = document.querySelectorAll('.checkout-modal');
 
-            // --- Função para ABRIR o modal ---
-            comprarBtns.forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const modalId = this.dataset.modal;
-                    const modal = document.getElementById(modalId);
-                    
-                    overlay.style.display = 'block';
-                    modal.style.display = 'block';
-                });
-            });
-
-            // --- Função para FECHAR o modal ---
             function closeModal() {
                 overlay.style.display = 'none';
                 modals.forEach(modal => modal.style.display = 'none');
             }
 
+            comprarBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const modalId = this.dataset.modal;
+                    const modal = document.getElementById(modalId);
+                    overlay.style.display = 'block';
+                    modal.style.display = 'block';
+                });
+            });
+
             closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
             overlay.addEventListener('click', closeModal);
 
-            
-            // --- Função REUTILIZÁVEL para controlar o toggle de pagamento ---
             function setupPaymentToggle(pixRadioId, criptoRadioId, pixDetailsId, criptoDetailsId) {
                 const radioPix = document.getElementById(pixRadioId);
                 const radioCripto = document.getElementById(criptoRadioId);
@@ -753,7 +916,6 @@
                 }
             }
 
-            // Configura o toggle para CADA modal
             setupPaymentToggle('opt-pix-1', 'opt-cripto-1', 'detalhes-pix-1', 'detalhes-cripto-1');
             setupPaymentToggle('opt-pix-2', 'opt-cripto-2', 'detalhes-pix-2', 'detalhes-cripto-2');
             setupPaymentToggle('opt-pix-3', 'opt-cripto-3', 'detalhes-pix-3', 'detalhes-cripto-3');
@@ -770,7 +932,6 @@
                     }
                 });
             });
-
         });
     </script>
 
