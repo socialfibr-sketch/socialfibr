@@ -133,7 +133,7 @@
         }
         .conceito-card h3 { color: var(--cor-texto); }
         
-        /* --- [ 4. *** NOVO *** CHAT APRENDA ] --- */
+        /* --- [ 4. CHAT APRENDA ] --- */
         #aprenda-app {
             background-color: var(--cor-fundo-secundaria);
             padding: 80px 0;
@@ -156,7 +156,7 @@
             padding: 20px;
             overflow-y: auto;
             text-align: left;
-            background-color: #15152a; /* Um tom ligeiramente mais claro que o card */
+            background-color: #15152a;
         }
 
         .message {
@@ -509,7 +509,6 @@
     </header>
 
     <main>
-        <!-- SEÇÃO 1: INÍCIO E CONCEITO -->
         <section id="inicio">
             <div class="container">
                 <h1>Sua Jornada Descomplicada no Mundo Cripto Começa Aqui!</h1>
@@ -525,22 +524,18 @@
             </div>
         </section>
 
-        <!-- ==============================================
-        *** SEÇÃO 4: APRENDA - CHAT EMBUTIDO (REPRODUZIDO) ***
-        ============================================== -->
         <section id="aprenda-app">
             <div class="container">
                 <h2>🧠 Tutor Cripto AI: Tire Suas Dúvidas Simples</h2>
                 <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px auto; color: var(--cor-texto);">
-                    Pergunte sobre **Bitcoin**, **Blockchain**, **Segurança** ou **o que é cripto** e receba respostas instantâneas.
+                    Pergunte sobre **Bitcoin**, **Blockchain**, **Segurança**, **Comprar**, **KYC** ou **Regulamentação** e receba respostas instantâneas.
                 </p>
                 
                 <div class="chat-container">
                     <div id="chat-messages">
-                        <!-- Mensagem de boas-vindas da IA -->
                         <div class="message message-ai">
                             <div class="message-bubble">
-                                Olá! Eu sou seu Tutor Cripto. Pronto para aprender! Pergunte-me sobre **Bitcoin**, **Blockchain**, **Segurança** ou **o que é cripto**.
+                                Olá! Eu sou seu Tutor Cripto. Pronto para aprender! Pergunte-me sobre **Bitcoin**, **Blockchain**, **Segurança**, **Comprar** ou **Regulamentação**.
                             </div>
                         </div>
                     </div>
@@ -553,7 +548,6 @@
             </div>
         </section>
         
-        <!-- SEÇÃO 5: EBOOKS -->
         <section id="ebooks">
             <div class="container">
                 <h2>📚 Nossa Biblioteca Essencial</h2>
@@ -589,7 +583,6 @@
             </div>
         </section>
 
-        <!-- SEÇÃO 6: FAQ -->
         <section id="faq">
             <div class="container">
                 <h2>❓ Dúvidas Frequentes</h2>
@@ -610,7 +603,6 @@
             </div>
         </section>
 
-        <!-- SEÇÃO 7: YOUTUBE SHORTS -->
         <section id="youtube-shorts">
             <div class="container">
                 <h2><i class="fab fa-youtube"></i> Nossos Shorts Recentes</h2>
@@ -659,7 +651,6 @@
             </div>
         </section>
 
-        <!-- SEÇÃO 8: RODAPÉ -->
         <section id="rodape">
             <div class="container" style="padding-bottom: 20px; padding-top: 0;"> <footer>
                     <div class="social-links">
@@ -681,7 +672,6 @@
         
     </main>
 
-    <!-- MODAIS DE CHECKOUT -->
     <div id="modal-overlay" class="modal-overlay"></div>
 
     <div id="modal-ebook1" class="checkout-modal">
@@ -782,14 +772,18 @@
 
 
     <script>
-        // Objeto de Conhecimento Simples para o Tutor Cripto
+        // Objeto de Conhecimento Simples para o Tutor Cripto (BASE EXPANDIDA)
         const knowledgeBase = {
             'bitcoin': 'O Bitcoin (BTC) é a primeira criptomoeda. É uma moeda digital descentralizada, o que significa que não é controlada por bancos ou governos. Foi criado em 2009 e é o mais famoso ativo digital.',
             'blockchain': 'A Blockchain (ou "cadeia de blocos") é a tecnologia por trás do Bitcoin. É um livro-razão digital e distribuído que registra todas as transações de forma segura, transparente e imutável.',
-            'seguranca': 'Segurança é crucial! Nunca compartilhe suas chaves privadas ou seed phrase (a sequência de 12 ou 24 palavras) com ninguém. Use autenticação de dois fatores (2FA) e pesquise bem antes de investir.',
-            'o que é cripto': 'Criptomoedas são moedas digitais e virtuais que utilizam criptografia para garantir a segurança das transações. Elas permitem a transferência de valor diretamente entre as pessoas (P2P), sem intermediários.',
-            'defi': 'DeFi significa Finanças Descentralizadas. É um ecossistema de aplicações financeiras construídas em blockchain (principalmente Ethereum) que visam recriar serviços bancários de forma aberta e sem permissão.',
+            'seguranca': 'Segurança é crucial! Nunca compartilhe suas chaves privadas (seed phrase). Use 2FA. Sobre KYC (verificação de identidade), exchanges regulamentadas exigem para combater crimes financeiros, mas existem métodos P2P (peer-to-peer) que podem não exigir.',
+            'o que é cripto': 'Criptomoedas são moedas digitais e virtuais que utilizam criptografia para garantir a segurança das transações. Elas funcionam fora do sistema bancário tradicional.',
+            'defi': 'DeFi significa Finanças Descentralizadas. É um ecossistema de aplicações financeiras construídas em blockchain que visam recriar serviços bancários de forma aberta e sem permissão.',
             'nft': 'NFTs (Tokens Não Fungíveis) são ativos digitais únicos que representam a propriedade de itens como arte, colecionáveis ou terrenos virtuais. Cada NFT tem um valor e uma identidade diferente.',
+            'comprar': 'Para comprar criptomoedas, você geralmente precisa de uma Corretora (Exchange) centralizada, como Binance ou Coinbase. Crie uma conta, complete a verificação (KYC) e use PIX ou transferência bancária para depositar dinheiro.',
+            'kyc': 'KYC (Know Your Customer/Conheça Seu Cliente) é um processo de verificação de identidade exigido pela maioria das corretoras regulamentadas no mundo para prevenir lavagem de dinheiro e outros crimes financeiros. É um requisito padrão.',
+            'regulamentacao': 'A regulamentação cripto varia muito por país. No Brasil e na maioria dos países, as regras buscam trazer segurança e clareza fiscal. Fique atento às regras locais e declare seus ativos, se necessário.',
+            'p2p': 'P2P (Peer-to-Peer) significa "Pessoa para Pessoa". É uma forma de comprar ou vender criptomoedas diretamente de outro indivíduo, sem a intermediação de uma corretora centralizada.',
         };
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -845,7 +839,7 @@
                 }
 
                 // Resposta padrão
-                return 'Desculpe, não entendi sua pergunta. Lembre-se, posso responder sobre **Bitcoin, Blockchain, Segurança, DeFi, NFTs** ou **o que é cripto**.';
+                return 'Desculpe, não entendi sua pergunta. Lembre-se, posso responder sobre **Bitcoin, Blockchain, Segurança, Comprar, KYC** ou **Regulamentação**.';
             }
 
             // --- Evento de Envio do Formulário ---
